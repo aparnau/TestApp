@@ -1,60 +1,32 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="">
-<!--<![endif]-->
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home</title>
-<link href="css/boilerplate.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/respond.min.js"></script>
-<script>
-document.addEventListener('deviceready', function () {
-    // window.plugin.notification.local is now available
-		var now                  = new Date().getTime(),
-    _60_seconds_from_now = new Date(now + 60*1000);
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Notification Sample</title>
 
-window.plugin.notification.local.add({
-    id:      1,
-    title:   'Reminder',
-    message: 'Dont forget to buy some flowers.',
-    repeat:  'weekly',
-    date:    _60_seconds_from_now
-});
-}, false);
-
-</script>
-</head>
-<body>
-<div class="gridContainer clearfix">
- <div id="maincontainer" class="bgstripresult">
-   <div id="insidecont">
-  <div id="contentsection">
-   <div class="calcium_head">
-    <div class="logo_home"></div>
-    <p class="linetwo">Are you getting enough calcium from the foods you eat? </p>
-   </div>
-   <div class="clear"> </div>
-   <div class="calcium_mid">
-    <p class="mid_one">Check It Out</p>
-    <p class="mid_two">Your bones will thank you!</p>
-   </div>
-      <div class="clear"> </div>
-   <div class="calcium_btm">
-    <div id="enterbtn"><a href="#">Enter </a>
-    </div>
-   </div>
-  </div>
-  </div>
- </div>
-</div>
-</body>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles/main.css" />
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+		<script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<h1>Notification Sample</h1>
+		</header>
+		<div class="content">
+            <div class="action-area ch70">
+                <button class="button dh" id="alertButton">Show Alert</button>
+				<button class="button dh" id="confirmButton">Show Confirm</button>
+				<button class="button dh" id="beepButton">Beep</button>
+				<button class="button dh" id="vibrateButton">Vibrate</button>
+            </div>
+			<div class="result-area ch30">
+                <div class="results"></div>
+                <div class="separator"></div>
+            </div>
+		</div>
+        <footer class="footer">
+		    <div>Cordova API Samples</div>
+	    </footer>
+	</body>
 </html>
